@@ -1,0 +1,198 @@
+:root {
+  --inter-primary: #360023;
+  --inter-secondary: #ec6d64;
+  --inter-tertiary: #ef8277;
+  --ds-bg-1: #009688;
+  --ds-bg-2: #414141;
+  --ds-bg-3: #4fc3f7;
+  --ds-bg-4: #4d4d4d;
+  --ds-txt-1: #f1f1f1;
+  --ds-txt-2: #a1a1a1;
+  --ds-txt-3: #4fc3f7;
+}
+.gradient {
+  background-image: linear-gradient(to top right, #611746, #360023);
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+  height: 100vh;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+*:focus {
+  outline: 0px solid transparent;
+}
+/*INTEROPERABILIDAD PRO STYLES*/
+body .inter-tabs .theme--dark .v-tabs__bar {
+  background-color: red !important;
+}
+.inter-subheader > * {
+  display: block;
+  line-height: 0.5rem;
+  color: var(--ds-bg-1);
+}
+.inter-links {
+  color: var(--ds-txt-3);
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.inter-links:hover {
+  text-decoration: underline;
+}
+.inter-card-container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+.inter-instructions {
+  font-weight: 300;
+  margin: 1px 10px 25px 5px;
+  color: var(--ds-txt-1);
+}
+.inter-container {
+  padding: 10px;
+  padding-top: 30px;
+}
+.json-container {
+  padding: 16px;
+  min-height: 100%;
+  overflow-y: auto;
+  background-color: #212121;
+  color: var(--ds-bg-3);
+}
+.json-container > * > * > * {
+  font-family: "roboto" !important;
+}
+/* Estipos para tablas */
+
+/*pruebas*/
+/* 
+tr {
+	background-color: #263238;
+	cursor: pointer;
+}
+tr:not(:last-child) {
+	border-bottom: 10px solid white !important;
+}
+tr {
+	border-left: 6px solid red;
+}
+td {
+	padding: 20px 0 !important;
+	height: 10px;
+} */
+/* end pruebas */
+td[data-metodo="POST"] {
+  color: #ffc107;
+  font-weight: 900 !important;
+}
+td[data-metodo="PATCH"],
+td[data-metodo="REGISTRADO"] {
+  color: #9575cd;
+  font-weight: 900 !important;
+}
+td[data-metodo="GET"] {
+  color: #00c853;
+  font-weight: 900 !important;
+}
+td[data-metodo="DELETE"] {
+  color: #f44336;
+  font-weight: 900 !important;
+}
+td[data-metodo="Conectado"] {
+  color: #00c853;
+  font-weight: 900 !important;
+}
+td[data-metodo="NO conectado"],
+[data-metodo="INACTIVO"] {
+  color: #aeae9e;
+  font-weight: 900 !important;
+}
+/* Fin estilos para tablas */
+.inter-mid-container {
+  width: 950px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.inter-auto-scroll {
+  max-height: calc(100vh - 400px);
+  overflow-y: auto;
+}
+.inter-json .vjs__tree {
+  font-family: "Courier New", Courier, monospace;
+}
+.inter-h2 {
+  color: var(--inter-text-primary);
+  text-align: center;
+  font-size: 1.8rem;
+}
+.inter-p {
+  color: var(--inter-text-secondary);
+  text-align: center;
+}
+.my-auto-x-scroll {
+  overflow-x: auto;
+}
+.my-step {
+  width: 100%;
+  padding: 0 16px 10px 16px;
+  min-height: calc(100vh - 300px);
+}
+
+/* Vuetify styles */
+
+body .toolbar {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+body .menu__content {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+/* Nav-View styles - vuetify */
+/*Stilos para el side bar list*/
+/* AQUI ES DONDE TENEMOS QUE VER EL TEMA DE LA BARRA A LA IZUIQRDA DESCOLOCADA, ojo cambiando side-var-view por body funciona */
+.side-var-view .list__tile {
+  margin: 10px 0px;
+  position: relative;
+}
+.list__tile--active .list__tile__title,
+.list__tile__action {
+  color: white !important;
+  position: relative;
+}
+.list__tile--active::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--ds-bg-1) !important;
+  right: 20px;
+  top: 8px;
+}
+/*Fin stilos side bar list*/
+body .snack__wrapper {
+  background-color: var(--inter-primary);
+}
+.navigation-drawer {
+  background-color: #212121 !important;
+  box-shadow: 3px 0 6px rgba(0, 0, 0, 0.16);
+}
+.inter-buttons .btn {
+  text-transform: initial;
+  font-weight: normal;
+  color: var(--inter-text-primary);
+  font-size: 1.1rem;
+}
+
+body .create .stepper,
+.stepper__header {
+  box-shadow: none !important;
+}
